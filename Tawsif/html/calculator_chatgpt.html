@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+   <style>
+    body{
+      background-color: aquamarine;
+    }
+    .calculator {
+  width: 400px;
+  height: 510px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px inset black;
+  padding: 20px;
+  background-color: gray;
+  }
+
+input#display {
+  width: 90%;
+  height: 80px;
+  font-size: 36px;
+  text-align: right;
+  background-color: #eee;
+  border: groove;
+  padding-right: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+button {
+  width: 75px;
+  height: 60px;
+  font-size: 24px;
+  margin: 10px;
+  background-color: yellow;
+  border: 1px solid #000;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.operator {
+  background-color: floralwhite;
+}
+
+.operator:hover {
+  background-color: red;
+}
+.result{
+  width: 170px;
+}
+
+   </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display">
+      <br><br>
+      <div class="row">
+        <button class="operator" id="clear" onclick="clearDisplay()">C</button>
+        <button class="operator" id="back" onclick="back()">⌫</button>
+        <button class="operator" id="percentage" onclick="percentage()">%</button>
+        <button class="operator" id="division" onclick="operate('/')">&divide;</button>
+      </div>
+      <div class="row">
+        <button id="7" onclick="addToDisplay('7')">7</button>
+        <button id="8" onclick="addToDisplay('8')">8</button>
+        <button id="9" onclick="addToDisplay('9')">9</button>
+        <button class="operator" id="multiplication" onclick="operate('*')">&times;</button>
+      </div>
+      <div class="row">
+        <button id="4" onclick="addToDisplay('4')">4</button>
+        <button id="5" onclick="addToDisplay('5')">5</button>
+        <button id="6" onclick="addToDisplay('6')">6</button>
+        <button class="operator" id="subtraction" onclick="operate('-')">&minus;</button>
+      </div>
+      <div class="row">
+        <button id="1" onclick="addToDisplay('1')">1</button>
+        <button id="2" onclick="addToDisplay('2')">2</button>
+        <button id="3" onclick="addToDisplay('3')">3</button>
+        <button class="operator" id="addition" onclick="operate('+')">&plus;</button>
+      </div>
+      <div class="row">
+        <button id="0" onclick="addToDisplay('0')">0</button>
+        <button id="decimal" onclick="addToDisplay('.')">.</button>
+        <button class="operator result" id="equals" onclick="calculate()">=</button>
+      </div>
+    </div>
+  </body>
+  <script src="calculator_chatgpt.js"></script>
+</html>

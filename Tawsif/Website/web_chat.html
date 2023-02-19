@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+}
+
+.about {
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.skills {
+  padding: 2rem;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  width: 30%;
+  font-size: 1.2rem;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.skill-level {
+  width: 40%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 2rem;
+}
+
+.skill-level-fill {
+  background-color: #333;
+  height: 100%;
+  transition: width 0.5s;
+}
+
+.skill:hover .skill-level-fill {
+  width: 100%;
+}
+
+.skill-percent {
+  font-size: 1.2rem;
+  width: 30%;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+
+.contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-input {
+  width: 60%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.contact-submit-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+</style>
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    
+    
+    <section class="hero">
+      <h1 class="hero-title">Hello, I'm Tawsif Aman</h1>
+      <p class="hero-subtitle">Web Developer</p>
+    </section>
+    <section class="about">
+      <h2 class="about-title">About me</h2>
+      <p class="about-text">
+        I am a full-stack web developer with a passion for creating
+        beautiful, functional, and user-friendly websites. I have experience
+        with HTML, CSS, JavaScript, and various frameworks and libraries. 
+      </p>
+    </section>
+    <section class="skills">
+      <h2 class="skills-title">Skills</h2>
+      <div class="skill">
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-level">
+          <div class="skill-level-fill" style="width: 87%"></div>
+        </div>
+        <div class="skill-percent">87%</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="skill-level">
+          <div class="skill-level-fill" style="width: 90%"></div>
+        </div>
+        <div class="skill-percent">90%</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="skill-level">
+          <div class="skill-level-fill" style="width: 80%"></div>
+        </div>
+        <div class="skill-percent">80%</div>
+      </div>
+    </section>
+    
+    <section class="contact">
+      <h2 class="contact-title">Get in Touch</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Name" class="contact-input">
+        <input type="email" placeholder="Email" class="contact-input">
+        <textarea placeholder="Message" class="contact-input"></textarea>
+        <button type="submit" class="contact-submit-btn">Submit</button>
+      </form>
+      <p class="contact-info">
+        Email: tawsifplayz@gmail.com <br />
+        Phone: +8801774757479
+      </p>
+    </section>
+    
+    <footer class="footer">
+      <p class="footer-text">Copyright &copy; 2023</p>
+    </footer>
+  </body>
+</html>
