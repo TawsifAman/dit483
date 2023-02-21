@@ -16,6 +16,99 @@
             background: #1f242d;
             text-transform: uppercase;
         }
+        header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover{
+    color: #0ef;
+}
+.navbar a.active{
+    color: #0ef;
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
         h1{
             text-align: center;
         }
@@ -102,6 +195,16 @@
     </style>
 </head>
 <body>
+    <header>
+        <a href="#" style = "--i:1"  class = "logo">Portfolio</a>
+        
+        <nav class="navbar">
+            <a href="website.html" style = "--i:2" target=”_blank”>Home</a></li>
+            <a href="skill.html" style = "--i:3" target=”_blank” class="active">Skills</a></li>
+            <a href="#about" style = "--i:4" target=”_blank”>About</a></li>
+                <a href="#contact" style = "--i:5" target=”_blank”>Contact</a></li>
+        </nav>
+    </header>
    <div class="skill">
     <h1>My Skills</h1>
     <li><h3>HTML</h3>
