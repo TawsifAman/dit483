@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: #1f242d;
+        }
+        header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover{
+    color: #0ef;
+}
+.navbar a.active{
+    color: #0ef;
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+        .contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-title {
+    padding: 4%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-input {
+  width: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.contact-submit-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" style = "--i:1"  class = "logo">Portfolio</a>
+        
+        <nav class="navbar">
+            <a href="website.html" style = "--i:2" target="_blank">Home</a></li>
+            <a href="skill.html" style = "--i:3" target="_blank">Skills</a></li>
+            <a href="about.html" style = "--i:4" target="_blank">About</a></li>
+                <a href="contact.html" style = "--i:5" target="_blank" class="active">Contact</a></li>
+        </nav>
+    </header>
+    <h2 class="contact-title">Get in Touch</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Name" class="contact-input">
+        <input type="email" placeholder="Email" class="contact-input">
+        <textarea placeholder="Message" class="contact-input"></textarea>
+        <button type="submit" class="contact-submit-btn">Submit</button>
+      </form>
+      <p class="contact-info">
+        Email: tawsifplayz@gmail.com <br />
+        Phone: +8801774757479
+      </p>
+</body>
+</html>
