@@ -1,77 +1,30 @@
 
-const form = [...document.querySelector('.form').children];
+      const square = document.getElementById("square");
+      const frontSide = document.getElementById("frontSide");
+      const rightSide = document.getElementById("rightSide");
+      const leftSide = document.getElementById("leftSide");
 
-form.forEach((item, i) => {
-    setTimeout(() => {
-        item.style.opacity = 1;
-    }, i*100);
-})
+      frontSide.addEventListener("click", () => {
+        frontSide.style.display = "none";
+        rightSide.style.display = "block";
+        leftSide.style.display = "block";
+        square.style.transform = "rotate3d(0, 0, 0, 90deg)";
+        document.title = "Login page";
+      });
 
-window.onload = () => {
-    if(sessionStorage.name){
-        location.href = '/';
-    }
-}
+      rightSide.addEventListener("click", () => {
+        rightSide.style.display = "none";
+        frontSide.style.display = "block";
+        leftSide.style.display = "block";
+        square.style.transform = "rotate3d(0, -1, 0, 90deg)";
+        document.title = "Sign up page";
+      });
 
-// form validation
-
-const name = document.querySelector('.name') || null;
-const email = document.querySelector('.email');
-const password = document.querySelector('.password');
-const submitBtn = document.querySelector('.submit-btn');
-
-if(name == null){ // means login page is open
-    submitBtn.addEventListener('click', () => {
-        fetch('/login-user',{
-            method: 'post',
-            headers: new Headers({'Content-Type': 'application/json'}),
-            body: JSON.stringify({
-                email: email.value,
-                password: password.value
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            validateData(data);
-        })
-    })
-} else{ // means register page is open
-
-    submitBtn.addEventListener('click', () => {
-        fetch('/register-user', {
-            method: 'post',
-            headers: new Headers({'Content-Type': 'application/json'}),
-            body: JSON.stringify({
-                name: name.value,
-                email: email.value,
-                password: password.value
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            validateData(data);
-        })
-    })
-
-}
-
-const validateData = (data) => {
-    if(!data.name){
-        alertBox(data);
-    } else{
-        sessionStorage.name = data.name;
-        sessionStorage.email = data.email;
-        location.href = '/';
-    }
-}
-
-const alertBox = (data) => {
-    const alertContainer = document.querySelector('.alert-box');
-    const alertMsg = document.querySelector('.alert');
-    alertMsg.innerHTML = data;
-
-    alertContainer.style.top = `5%`;
-    setTimeout(() => {
-        alertContainer.style.top = null;
-    }, 5000);
-}
+      leftSide.addEventListener("click", () => {
+        leftSide.style.display = "none";
+        frontSide.style.display = "block";
+        rightSide.style.display = "none";
+        square.style.transform = "rotate3d(0, 1, 0, 90deg)";
+        document.title = "Forgot password page";
+      });
+    
