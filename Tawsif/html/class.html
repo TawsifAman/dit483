@@ -2,50 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="Study Blog Logo.ico">
     <title>Login Page</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color: aquamarine;
-        }
-        form{
-            text-align: center;
-            padding-top: 10px;
-        }
-        form .user{
-            padding-bottom: 10px;
-        }
-        form .submit{
-            border: 2px black solid;
-            border-radius: 20px;
-            color: white;
-            background-color: blueviolet;
-            width: 180px;
-            height: 40px;
-        }
-        label{
-            padding-right: 2rem;
-        }
-    </style>
+
+    <link rel="stylesheet" href="register.css">
+
 </head>
 <body>
-    <h1 style="text-align: center;">Login Page</h1>
-    <hr>
-    <form action="">
-        <div class="user">
-            <label for="user">Enter Your Email :</label><br>
-            <input type="email" name="user" id="" required><br>
-        </div>
-        <label for="password">Enter Your Password :</label><br>
-        <input type="password" name="password" id="" required><br><br>
-        
-        <input type="submit" class="submit" value="Login">
-        
-    </form>
-    <h4 style="text-align: center;">Do not have a account <a href="register.html">Register</a></h4>
-    <h4 style="text-align: center;">Forgot Password <a href="forgot_pass.html" style="color: rgb(63, 31, 179);">Change</a></h4>
+
+    <div class="alert-box">
+        <p class="alert"></p>
+    </div>
+
+    <div class="form">
+        <h1 class="heading">login</h1>
+        <input type="email" placeholder="email" autocomplete="off" class="email" required>
+        <input type="password" placeholder="password" autocomplete="off" class="password" required>
+        <button class="submit-btn">log in</button>
+        <a href="/register" class="link">don't have an account? Register one</a>
+    </div>
+
+    <script src="js/form.js"></script>
+    
 </body>
 </html>
